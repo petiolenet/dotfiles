@@ -1,0 +1,169 @@
+@define-color bg             #0f130d;
+@define-color surface        #171c13;
+@define-color surface-2      #1f2518;
+
+@define-color ink            #ddd5bc;
+@define-color ink-dim        #9a9c81;
+@define-color ink-faint      #6d7059;
+
+@define-color border         #333c29;
+@define-color border-strong  #4b5638;
+
+@define-color pine           #9cba8d;
+@define-color moss           #85a271;
+@define-color olive          #a8ac79;
+
+@define-color accent         #d78a51;
+@define-color accent-hover   #eba066;
+
+* {
+    border: none;
+    border-radius: 0;
+
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @bg;
+    color: @ink;
+}
+
+/* ─────────────────────────────────────────────
+   Workspaces
+   ───────────────────────────────────────────── */
+
+#workspaces {
+    margin-left: 8px;
+}
+
+#workspaces button {
+    padding: 0 9px;
+
+    color: @ink-faint;
+    background: transparent;
+
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button:hover {
+    color: @ink;
+    background: @surface;
+}
+
+#workspaces button.active {
+    color: @pine;
+    border-bottom-color: @pine;
+}
+
+#workspaces button.urgent {
+    color: @accent;
+    border-bottom-color: @accent;
+}
+
+/* ─────────────────────────────────────────────
+   Center information
+   ───────────────────────────────────────────── */
+
+#cpu,
+#memory,
+#temperature {
+    margin: 0 4px;
+    color: @ink-dim;
+}
+
+#cpu {
+    margin-left: 8px;
+}
+
+#temperature {
+    margin-right: 8px;
+}
+
+#cpu.warning,
+#memory.warning,
+#temperature.warning {
+    color: @olive;
+}
+
+#cpu.critical,
+#memory.critical,
+#temperature.critical {
+    color: @accent;
+}
+
+/* ─────────────────────────────────────────────
+   Right side
+   ───────────────────────────────────────────── */
+
+#network,
+#pulseaudio,
+#battery,
+#clock {
+    margin: 0 7px;
+}
+
+#network {
+    color: @moss;
+}
+
+#network.disconnected {
+    color: @accent;
+}
+
+#pulseaudio {
+    color: @pine;
+}
+
+#pulseaudio.muted {
+    color: @ink-faint;
+}
+
+#battery {
+    color: @pine;
+}
+
+#battery.warning {
+    color: @olive;
+}
+
+#battery.critical:not(.charging) {
+    color: @accent;
+}
+
+#battery.charging {
+    color: @pine;
+}
+
+#clock {
+    margin-left: 12px;
+    color: @ink;
+    font-weight: 500;
+}
+
+/* ─────────────────────────────────────────────
+   Tray
+   ───────────────────────────────────────────── */
+
+#tray {
+    margin: 0 10px 0 5px;
+    padding-left: 10px;
+
+    border-left: 1px solid @border;
+}
+
+/* ─────────────────────────────────────────────
+   Tooltips
+   ───────────────────────────────────────────── */
+
+tooltip {
+    background: @surface;
+    color: @ink;
+
+    border: 1px solid @border-strong;
+}
+
+tooltip label {
+    color: @ink;
+}

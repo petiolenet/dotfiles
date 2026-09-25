@@ -1,0 +1,86 @@
+palette = "petiole"
+
+#    petiole  @evergreen   ▶     ~/code     ▶     ◀   main   ?   ▶         took 3s
+#   └───1───┘└────2─────┘└─3─┘ └───4───┘  └─5─┘ └────────6────────┘       └───7───┘
+#   ❦
+#   └8┘
+#
+#   1  $username                      → [username] section
+#   2  $hostname                      → [hostname] section
+#   3  [](fg:pine bg:moss)       → connector: user block into folder block
+#   4  $directory                     → [directory] section
+#   5  [](fg:moss)               → connector: folder block into nothing
+#   6  ( ◀ $git_branch $git_status ▶ ) → git tag: [git_branch] + [git_status] sections
+#      $fill                          → the empty gap that pushes 7 to the right
+#   7  $cmd_duration                  → [cmd_duration] section
+#      $line_break                    → go down to the second line
+#   8  $character                     → [character] section
+
+format = """
+$username\
+$hostname\
+[](fg:pine bg:moss)\
+$directory\
+[](fg:moss)\
+( [](fg:olive)$git_branch$git_status[](fg:olive))\
+$fill\
+$cmd_duration\
+$line_break\
+$character"""
+[palettes.petiole]
+bg        = "#0f130d"  
+ink       = "#ddd5bc"  
+ink-faint = "#6d7059"  
+pine      = "#9cba8d"  
+moss      = "#85a271"  
+olive     = "#a8ac79"  
+accent    = "#d78a51"  
+
+# identity
+
+[username]
+show_always = true
+style_user = "fg:bg bg:pine"
+style_root = "fg:bg bg:accent"   # turns orange when you're root
+format = "[ $user]($style)"
+
+[hostname]
+ssh_only = false
+style = "fg:bg bg:pine"
+format = "[@$hostname ]($style)"
+
+# current folder/directory
+
+[directory]
+style = "fg:bg bg:moss"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+
+#for when inside a repo
+
+[git_branch]
+symbol = " "
+style = "fg:bg bg:olive"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "fg:bg bg:olive"
+format = "([$all_status$ahead_behind ]($style))"
+
+# command duration
+
+[fill]
+symbol = " "
+
+[cmd_duration]
+min_time = 2000
+style = "fg:ink-faint"
+format = "[took $duration]($style) "
+
+# fleuron (floral heart)
+
+[character]
+success_symbol = "[❦ ⤳](bold fg:pine)"
+error_symbol = "[❦](bold fg:accent)"
+vimcmd_symbol = "[❮](bold fg:olive)"
