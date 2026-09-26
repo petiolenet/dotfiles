@@ -26,3 +26,7 @@ inputbar {
     background-color: @surface;
 
 }
+
+listview {
+    columns: 3;
+}

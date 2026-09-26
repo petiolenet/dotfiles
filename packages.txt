@@ -31,3 +31,6 @@ ttf-jetbrains-mono-nerd
 # managing the dots
 git
 stow
+
+# just for fun
+fastfetch
