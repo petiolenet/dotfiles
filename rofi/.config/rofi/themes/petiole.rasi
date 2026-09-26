@@ -1,0 +1,28 @@
+* {
+    bg:      #0f130d;
+    surface: #171c13;
+    border:  #333c29;
+    ink:     #ddd5bc;
+    faint:   #6d7059;
+    pine:    #9cba8d;
+    accent:  #d78a51;
+
+    background-color: transparent;
+    text-color:       @ink;
+}
+
+window {
+    background-color: @bg;
+    width: 32%;
+    border: 3px;
+    border-color: @border;
+    padding: 16px;
+}
+
+inputbar {
+    children: [ prompt, entry];
+    spacing: 8px;
+    padding: 8px 10px;
+    background-color: @surface;
+
+}
