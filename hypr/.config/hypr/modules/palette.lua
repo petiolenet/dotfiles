@@ -1,5 +1,4 @@
--- petiole palette, shared with starship / kitty / waybar
--- Hex without the "#" so it can be wrapped in rgba() with any alpha
+-- palette
 
 return {
     bg        = "0f130d",

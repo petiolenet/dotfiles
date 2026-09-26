@@ -1,6 +1,6 @@
--- petiole hyprland config
--- Everything lives in ./modules; order matters, later files win on conflicts.
--- The pre-split single file is kept as hyprland.lua.bak
+
+-- actual files kept in ./modules, mostly for organization purposes.
+-- single pre-split file as hyprland.lua.bak (mostly for archival/backup purposes)
 
 require("modules.monitors")
 require("modules.env")

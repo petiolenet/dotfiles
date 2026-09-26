@@ -1,0 +1,33 @@
+# install: grep -v '^#' packages.txt | sudo pacman -S --needed -
+
+# compositor + desktop
+hyprland
+hyprpaper
+hyprpolkitagent
+waybar
+mako
+rofi
+thunar
+
+# terminal + shell
+kitty
+zsh
+starship
+
+# screenshots (binds.lua)
+grim
+slurp
+wl-clipboard
+
+# audio + media
+wireplumber
+pavucontrol
+playerctl
+cava
+
+# fonts
+ttf-jetbrains-mono-nerd
+
+# managing the dots
+git
+stow

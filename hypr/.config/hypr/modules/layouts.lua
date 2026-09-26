@@ -1,6 +1,4 @@
------------------
----- LAYOUTS ----
------------------
+-- layouts
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({

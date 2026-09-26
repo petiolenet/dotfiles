@@ -1,6 +1,4 @@
---------------------
----- ANIMATIONS ----
---------------------
+-- animations
 
 hl.config({
     animations = {
