@@ -5,7 +5,9 @@
     "spacing": 0,
 
     "modules-left": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "mpris",
+        "custom/cava"
     ],
 
     "modules-center": [
@@ -27,6 +29,27 @@
         "all-outputs": true,
         "format": "{name}",
         "on-click": "activate"
+    },
+
+    "mpris": {
+        "format": "{status_icon} {dynamic}",
+        "dynamic-order": ["artist", "title"],
+        "dynamic-len": 40,
+        "dynamic-separator": " – ",
+        "status-icons": {
+            "playing": "󰏤",
+            "paused": "󰐊"
+        },
+        "tooltip-format": "{player}: {artist} – {title}",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
+
+    "custom/cava": {
+        "exec": "~/.config/waybar/scripts/cava.sh",
+        "format": "{}",
+        "tooltip": false
     },
 
     "cpu": {
