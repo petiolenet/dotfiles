@@ -57,6 +57,14 @@ hl.window_rule({
 -- })
 -- overlayLayerRule:set_enabled(false)
 
+-- Let games skip vsync (needs allow_tearing in look.lua)
+hl.window_rule({
+    name  = "games-immediate",
+    match = { class = "^(steam_app_.*|gamescope)$" },
+
+    immediate = true,
+})
+
 -- Hyprland-run windowrule
 hl.window_rule({
     name  = "move-hyprland-run",
