@@ -4,8 +4,8 @@
 
 hl.config({
     input = {
-        kb_layout  = "us",
-        kb_variant = "",
+        kb_layout  = "us,br", -- toggle with SUPER + SPACE
+        kb_variant = ",",
         kb_model   = "",
         kb_options = "",
         kb_rules   = "",

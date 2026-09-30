@@ -97,11 +97,16 @@ window#waybar {
    Right side
    ───────────────────────────────────────────── */
 
+#language,
 #network,
 #pulseaudio,
 #battery,
 #clock {
     margin: 0 7px;
+}
+
+#language {
+    color: @olive;
 }
 
 #network {
