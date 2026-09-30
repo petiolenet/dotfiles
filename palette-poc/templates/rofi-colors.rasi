@@ -1,0 +1,9 @@
+* {
+    bg:      #{{bg}};
+    surface: #{{surface}};
+    border:  #{{border}};
+    ink:     #{{ink}};
+    faint:   #{{ink_faint}};
+    pine:    #{{pine}};
+    accent:  #{{accent}};
+}
