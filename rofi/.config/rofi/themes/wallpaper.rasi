@@ -1,0 +1,25 @@
+/* wallpaper picker grid, used by hypr/scripts/wallpaper.sh */
+@import "petiole"
+
+window {
+    width: 60%;
+}
+
+listview {
+    columns: 4;
+    lines: 2;
+    spacing: 10px;
+}
+
+element {
+    orientation: vertical;
+    padding: 6px;
+}
+
+element-icon {
+    size: 160px;
+}
+
+element-text {
+    horizontal-align: 0.5;
+}

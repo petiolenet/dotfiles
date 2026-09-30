@@ -1,0 +1,50 @@
+/* petiole swayosd: the volume/brightness popup */
+
+@define-color bg      #0f130d;
+@define-color surface #171c13;
+@define-color border  #333c29;
+@define-color ink     #ddd5bc;
+@define-color faint   #6d7059;
+@define-color pine    #9cba8d;
+
+window#osd {
+    padding: 10px 16px;
+    border-radius: 0;
+    border: 2px solid @border;
+    background: @bg;
+}
+
+window#osd #container {
+    margin: 8px;
+}
+
+window#osd image,
+window#osd label {
+    color: @ink;
+}
+
+window#osd progressbar:disabled,
+window#osd image:disabled {
+    opacity: 0.4;
+}
+
+window#osd progressbar {
+    min-height: 6px;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+}
+
+window#osd trough {
+    min-height: inherit;
+    border-radius: 0;
+    border: none;
+    background: @surface;
+}
+
+window#osd progress {
+    min-height: inherit;
+    border-radius: 0;
+    border: none;
+    background: @pine;
+}
