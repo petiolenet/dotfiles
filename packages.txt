@@ -8,6 +8,7 @@ waybar
 mako
 rofi
 thunar
+swayosd
 
 # terminal + shell
 kitty
@@ -19,11 +20,20 @@ grim
 slurp
 wl-clipboard
 
+# clipboard history (scripts/clipboard.sh)
+cliphist
+
 # audio + media
+pipewire
+pipewire-pulse
 wireplumber
 pavucontrol
 playerctl
 cava
+
+# optional, not installed by the command above:
+# brightnessctl   brightness key fallback when swayosd isn't running (laptops only)
+# hyprshutdown    nicer logout in powermenu.sh, falls back to hyprctl without it
 
 # fonts
 ttf-jetbrains-mono-nerd
