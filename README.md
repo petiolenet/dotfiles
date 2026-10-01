@@ -13,3 +13,7 @@ personal usability first dotfiles, not too fancy
 
 pushes to this repo via stow symlinks
 currently includes basic stuff like waybar, kitty, starship, and hyprland settings. i have yet to theme neovim
+
+## screenshots
+
+![desktop: starship prompt and cava on the left, fastfetch on the right, waybar with now playing on top](screenshots/desktop.png)
